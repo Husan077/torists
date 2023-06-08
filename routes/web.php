@@ -43,6 +43,7 @@ Route::group(
     Route::get('/restaurants', [SiteRestaurantsController::class, 'index'])->name('restaurants');
     Route::get('/restaurants/{restaurant}', [SiteRestaurantsController::class, 'show'])->name('restaurants_details');
 
+    require __DIR__.'/auth.php';
 });
 
 Route::post('/contact/sendToTg', [HomeController::class, 'sendToTg'])->name('contact.send');
@@ -51,7 +52,6 @@ Route::get('/logout', function () {
     return view('site.index');
 })->name('logout');
 
-require __DIR__.'/auth.php';
 
 //Admin
 
