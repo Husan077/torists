@@ -41,6 +41,8 @@
         </div>
     @endforeach
 @endisset
+
+@isset($achievements)
     <div class="promo-wrap pt-100 pb-70 z-0 undefined">
         <div class="container">
             <div class="row">
@@ -71,7 +73,9 @@
             </div>
         </div>
     </div>
+@endisset
 
+@isset($attractions)
     <section class="recommend-tour-area bg-heath ptb-100">
         <div class="container">
             <div class="row">
@@ -107,7 +111,8 @@
             </div>
         </div>
     </section>
-
+@endisset
+@isset($hotels)
     <div class="ptb-100">
         <section class="feature-wrap">
             <div class="container">
@@ -163,7 +168,8 @@
             </div>
         </section>
     </div>
-
+@endisset
+@isset($restaurants)
     <section class="adventure-tour-wrap">
         <div class="container">
             <div class="row">
@@ -175,7 +181,8 @@
             </div>
         </div>
     </section>
-
+@endisset
+@isset($restaurants)
     <div class="tour-slider-wrap pb-100">
         <div class="tour-slider-v3">
             <div class="tour-slider-v1 undefined owl-theme">
@@ -208,7 +215,7 @@
             </div>
         </div>
     </div>
-
+@endisset
     <section class="adventure-tour-wrap">
         <div class="container">
             <div class="row">
@@ -221,6 +228,7 @@
         </div>
     </section>
 
+@isset($bazaars)
     <div class="tour-slider-v1 undefined owl-theme"></div>
 
     <div class="tour-slider-v1 undefined owl-theme pb-100">
@@ -257,7 +265,7 @@
             </div>
         </div>
     </div>
-
+@endisset
 
 
     <div class="container px-0 bg-heath newsletter">
