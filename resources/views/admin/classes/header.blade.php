@@ -17,14 +17,14 @@
                         <x-feathericon-user class="mr-1" style="color:#f4834a; width: 25px" />
                         {{ auth()->user()->name ?? '' }}
                     </div>
-                    <a class="dropdown-item" href="{{ route('logout') }}">Выйти</a>
+{{--                    <a class="dropdown-item" href="{{ route('logout') }}">Выйти</a> --}}
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 
                         <x-dropdown-link :href="route('logout')"
                                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                            {{ __('Log Out') }}
+                            {{ __('Выйти') }}
                         </x-dropdown-link>
                     </form>
                 </div>
