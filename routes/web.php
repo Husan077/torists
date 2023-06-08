@@ -49,8 +49,8 @@ Route::group(
 Route::post('/contact/sendToTg', [HomeController::class, 'sendToTg'])->name('contact.send');
 
 Route::get('/logout', function () {
-    return view('site.index');
-})->middleware(['auth', 'verified'])->name('admin');
+    return redirect()->route('home');
+})->name('logout');
 
 
 //Admin
@@ -81,6 +81,6 @@ Route::middleware('auth')->group(function () {
 });
 
 
-//Route::get('/dashboard', function () {
-//    return view('dashboard');
-//})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
