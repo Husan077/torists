@@ -55,7 +55,7 @@ require __DIR__.'/auth.php';
 
 //Admin
 
-//Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     Route::resources([
         'admin/banners' => BannersController::class,
@@ -71,14 +71,14 @@ require __DIR__.'/auth.php';
     Route::post('/admin/bazaars/upload', [BazaarsController::class, 'upload'])->name('admin.bazaars.upload');
     Route::post('/admin/restaurants/upload', [RestaurantsController::class, 'upload'])->name('admin.restaurants.upload');
 
-//});
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
+
+});
 
 
 // Admin Laravel
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
