@@ -19,6 +19,8 @@
 
 @section('content')
 
+
+@isset($banner)
     @foreach($banners as $banner)
         <div class="hero-wrap style2"
              @isset($banner->image) style="background-image: url('{{ 'storage/' . $banner->image }}');" @endisset>
@@ -38,7 +40,7 @@
             </div>
         </div>
     @endforeach
-
+@endisset
     <div class="promo-wrap pt-100 pb-70 z-0 undefined">
         <div class="container">
             <div class="row">
