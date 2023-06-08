@@ -50,7 +50,7 @@ Route::post('/contact/sendToTg', [HomeController::class, 'sendToTg'])->name('con
 
 Route::get('/logout', function () {
     return view('site.index');
-})->name('logout');
+})->middleware(['auth', 'verified'])->name('admin');
 
 
 //Admin
