@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    Добавить новую новость
+    Добавить новую гостиницу
 @endsection
 
 @section('main')
     <div class="main-content">
         <div class="breadcrumb">
-            <h1 class="mr-2">Добавить новую новость</h1>
+            <h1 class="mr-2">Добавить новую гостиницу</h1>
             <ul>
-                <li><a href="{{ route('tours.index') }}">Все новости</a></li>
+                <li><a href="{{ route('tours.index') }}">Все гостиницы</a></li>
             </ul>
         </div>
         <div class="separator-breadcrumb border-top"></div>

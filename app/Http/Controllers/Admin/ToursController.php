@@ -51,8 +51,8 @@ class ToursController extends Controller
 
     public function edit($id)
     {
-        $hotels = Tours::find($id);
-        return view('admin.hotels.edit', compact('hotels'));
+        $hotel = Tours::find($id);
+        return view('admin.hotels.edit', compact('hotel'));
     }
 
     public function update(Request $request, $id)

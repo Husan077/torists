@@ -40,7 +40,7 @@
                                             <td>{!! $restaurants->text_ru !!}</td>
 {{--                                            <td>{{ Date::parse($restaurants->created_at)->format('j F Y') }}</td>--}}
                                             <td class="d-flex">
-                                                <a class="text-success mr-2" href="{{ route('tours.edit', $restaurants->id) }}"><x-feathericon-edit-2 class="nav-icon font-weight-bold" /></a>
+                                                <a class="text-success mr-2" href="{{ route('restaurants.edit', $restaurants->id) }}"><x-feathericon-edit-2 class="nav-icon font-weight-bold" /></a>
                                                 <a data-toggle="modal" data-target="#deletesModal{{$restaurants->id}}" class="text-danger mr-2" href="#"><x-feathericon-x-circle class="nav-icon font-weight-bold" /></a>
                                                 <div class="modal fade" id="deletesModal{{$restaurants->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true" style="display: none;">
                                                     <div class="modal-dialog" role="document">
@@ -57,7 +57,7 @@
                                                                 </ul>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <form action="{{ route('tours.destroy', $restaurants->id) }}" method="post">
+                                                                <form action="{{ route('restaurants.destroy', $restaurants->id) }}" method="post">
                                                                     @method('DELETE')
                                                                     @csrf
                                                                     <button class="btn btn-danger mr-2 cursor-pointer">Удалить</button>

@@ -52,8 +52,8 @@ class AttractionsController extends Controller
 
     public function edit($id)
     {
-        $attractions = Attractions::find($id);
-        return view('admin.attractions.edit', compact('attractions'));
+        $attraction = Attractions::find($id);
+        return view('admin.attractions.edit', compact('attraction'));
     }
 
     public function update(Request $request, $id)

@@ -9,7 +9,7 @@
         <div class="breadcrumb">
             <h1 class="mr-2">Редактировать</h1>
             <ul>
-                <li><a href="{{ route('tours.index') }}">Все новости</a></li>
+                <li><a href="{{ route('tours.index') }}">Все гостиницы</a></li>
             </ul>
         </div>
         <div class="separator-breadcrumb border-top"></div>
@@ -18,7 +18,7 @@
             <div class="col-md-12">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <form action="{{ route('tours.update', $hotels->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('tours.update', $hotel->id) }}" method="POST" enctype="multipart/form-data">
                             @method('PATCH')
                             @csrf
                             <div class="row">
@@ -26,7 +26,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Заголовок (uz)</label>
                                     <input class="form-control @error('title_uz') is-invalid @enderror" name="title_uz"
-                                           value="{{ $hotels->title_uz }}" type="text" placeholder="Введите название на узбекском">
+                                           value="{{ $hotel->title_uz }}" type="text" placeholder="Введите название на узбекском">
                                     @error('title_uz')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -37,7 +37,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Заголовок (ru)</label>
                                     <input class="form-control @error('title_ru') is-invalid @enderror" name="title_ru"
-                                           value="{{ $hotels->title_ru }}" type="text" placeholder="Введите название на русском">
+                                           value="{{ $hotel->title_ru }}" type="text" placeholder="Введите название на русском">
                                     @error('title_ru')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -48,7 +48,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Заголовок (en)</label>
                                     <input class="form-control @error('title_en') is-invalid @enderror" name="title_en"
-                                           value="{{ $hotels->title_en }}" type="text" placeholder="Введите название на английском">
+                                           value="{{ $hotel->title_en }}" type="text" placeholder="Введите название на английском">
                                     @error('title_en')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -61,7 +61,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Описание (uz)</label>
                                     <script src="{{ asset('js/admin/ckeditor/ckeditor.js') }}"></script>
-                                    <textarea class="form-control @error('text_uz') is-invalid @enderror" name="text_uz">{{ $hotels->text_uz }}</textarea>
+                                    <textarea class="form-control @error('text_uz') is-invalid @enderror" name="text_uz">{{ $hotel->text_uz }}</textarea>
                                     <script>
                                         CKEDITOR.replace('text_uz', {
                                                 filebrowserUploadUrl: "{{ route('admin.hotels.upload', ['_token' => csrf_token() ]) }}",
@@ -74,7 +74,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Описание (ru)</label>
                                     <script src="{{ asset('js/admin/ckeditor/ckeditor.js') }}"></script>
-                                    <textarea class="form-control @error('text_ru') is-invalid @enderror" name="text_ru">{{ $hotels->text_ru }}</textarea>
+                                    <textarea class="form-control @error('text_ru') is-invalid @enderror" name="text_ru">{{ $hotel->text_ru }}</textarea>
                                     <script>
                                         CKEDITOR.replace('text_ru', {
                                                 filebrowserUploadUrl: "{{ route('admin.hotels.upload', ['_token' => csrf_token() ]) }}",
@@ -87,7 +87,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Описание (ru)</label>
                                     <script src="{{ asset('js/admin/ckeditor/ckeditor.js') }}"></script>
-                                    <textarea class="form-control @error('text_en') is-invalid @enderror" name="text_en">{{ $hotels->text_en }}</textarea>
+                                    <textarea class="form-control @error('text_en') is-invalid @enderror" name="text_en">{{ $hotel->text_en }}</textarea>
                                     <script>
                                         CKEDITOR.replace('text_en', {
                                                 filebrowserUploadUrl: "{{ route('admin.hotels.upload', ['_token' => csrf_token() ]) }}",
@@ -102,7 +102,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Цена</label>
                                     <input class="form-control @error('price') is-invalid @enderror" name="price"
-                                           type="text" value="{{ $hotels->price }}" placeholder="Введите цену отеля">
+                                           type="text" value="{{ $hotel->price }}" placeholder="Введите цену отеля">
                                     @error('price')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -118,7 +118,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Latitude</label>
                                     <input class="form-control @error('ltd') is-invalid @enderror" name="ltd"
-                                           value="{{ $hotels->ltd }}" type="text" placeholder="41.297122">
+                                           value="{{ $hotel->ltd }}" type="text" placeholder="41.297122">
                                     @error('ltd')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -129,7 +129,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Longitude </label>
                                     <input class="form-control @error('lng') is-invalid @enderror" name="lng"
-                                           value="{{ $hotels->lng }}" type="text" placeholder="69.216046">
+                                           value="{{ $hotel->lng }}" type="text" placeholder="69.216046">
                                     @error('lng')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -143,7 +143,7 @@
 
 
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-12 form-group mb-3">
-                                    <textarea class="form-control @error('location') is-invalid @enderror" name="location" cols="30" rows="10">{{ $hotels->location }}</textarea>
+                                    <textarea class="form-control @error('location') is-invalid @enderror" name="location" cols="30" rows="10">{{ $hotel->location }}</textarea>
                                     @error('location')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -154,12 +154,12 @@
                                 <hr style="width: 95%; color: red">
 
                                 <div class="col-6 form-group mb-3">
-                                    <img src="{{ asset( 'storage/' . $hotels->image_1) }}" class="img-fluid"
+                                    <img src="{{ asset( 'storage/' . $hotel->image_1) }}" class="img-fluid"
                                          style="width: 500px;">
                                 </div>
 
                                 <div class="col-6 form-group mb-3">
-                                    <img src="{{ asset( 'storage/' . $hotels->image_2) }}" class="img-fluid"
+                                    <img src="{{ asset( 'storage/' . $hotel->image_2) }}" class="img-fluid"
                                          style="width: 500px;">
                                 </div>
 

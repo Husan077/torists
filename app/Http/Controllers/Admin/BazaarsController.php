@@ -50,8 +50,8 @@ class BazaarsController extends Controller
 
     public function edit($id)
     {
-        $bazaars = Bazaars::find($id);
-        return view('admin.bazaars.edit', compact('bazaars'));
+        $bazaar = Bazaars::find($id);
+        return view('admin.bazaars.edit', compact('bazaar'));
     }
 
     public function update(Request $request, $id)

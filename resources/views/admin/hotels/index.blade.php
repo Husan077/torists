@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    Отели
+    Гостиницы
 @endsection
 
 @section('main')
     <div class="main-content">
         <div class="breadcrumb">
-            <h1 class="mr-2">Отели</h1>
+            <h1 class="mr-2">Гостиницы</h1>
             <ul>
-                <li><a href="{{ route('tours.create') }}">Добавить новый отель</a></li>
+                <li><a href="{{ route('tours.create') }}">Добавить новую гостиницу</a></li>
             </ul>
         </div>
         <div class="separator-breadcrumb border-top"></div>
