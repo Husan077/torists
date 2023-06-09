@@ -5,9 +5,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-3 col-5">
                     <div class="logo v2">
-{{--                        <a class="" href="/">--}}
-{{--                            <img src="{{ asset('./images/site/logo.png') }}" alt="Image"/>--}}
-{{--                        </a>--}}
+                        {{--                        <a class="" href="/">--}}
+                        {{--                            <img src="{{ asset('./images/site/logo.png') }}" alt="Image"/>--}}
+                        {{--                        </a>--}}
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-9 col-7 order-lg-1 order-md-2 order-2">
@@ -132,7 +132,21 @@
                         </div>
                     </form>
                 </div>
-                <h5 class="mt-30 mb-20">@lang('main.follow')</h5>
+                <style>
+                    .phone:hover{
+                        color: rgba(35, 34, 34, 0.89) !important;
+                    }
+                </style>
+                <h4 class="mt-30 mb-20">
+                    @isset($settings->phone_1)
+                        <a class="phone" href="tel:{{$settings->phone_1}}">{{$settings->phone_1}}</a>
+                    @endisset
+                        <br>
+                    @isset($settings->phone_2)
+                        <a class="phone" href="tel:{{$settings->phone_2}}">{{$settings->phone_2}}</a>
+                    @endisset
+                </h4>
+                {{--                <h5 class="mt-30 mb-20">@lang('main.follow')</h5>--}}
                 <ul class="social-profile v1">
                     @isset($settings->facebook)
                         <li>

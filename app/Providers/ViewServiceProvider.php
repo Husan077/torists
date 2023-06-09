@@ -7,6 +7,7 @@ use App\View\Components\BazaarsComposer;
 use App\View\Components\HotelsCompsoer;
 use App\View\Components\LocaleComposer;
 use App\View\Components\RestaurantsComposer;
+use App\View\Components\SettingsComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -34,5 +35,6 @@ class  ViewServiceProvider extends ServiceProvider
         View::composer('*', AttractionsComposer::class);
         View::composer('*', RestaurantsComposer::class);
         View::composer('*', BazaarsComposer::class);
+        View::composer('*', SettingsComposer::class);
     }
 }

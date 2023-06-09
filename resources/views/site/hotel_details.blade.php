@@ -1,22 +1,16 @@
 @extends('layouts.site')
 
 @section('meta')
-    {{--    <title>Rollo.uz - @lang('main.jalyuzi')</title>--}}
-    {{--    <meta name="robots" content="index, follow">--}}
-    {{--    <meta property="keywords" content="{{ $settings->meta_keywords }}"/>--}}
-    {{--    <meta property="description" content="{{ $settings->{ 'meta_description_' . $locale} }}"/>--}}
-    {{--    <meta property="og:title" content="Rollo.uz - @lang('main.jalyuzi')"/>--}}
-    {{--    <meta property="og:keywords" content="{{ $settings->meta_keywords }}"/>--}}
-    {{--    <meta property="og:description" content="{{ $settings->{ 'meta_description_' . $locale} }}"/>--}}
-    {{--    <meta property="og:type" content="website"/>--}}
-    {{--    <meta property="og:image" content="{{ asset('images/logo/logo_blue.png') }}"/>--}}
-    {{--    <link rel="image_src" href="{{ asset('images/logo/logo_blue.png') }}"/>--}}
-    {{--    <script src="https://api-maps.yandex.ru/2.1/?apikey=563b2f5b-d161-4fd9-a856-d9492d0ba468&lang=ru_RU"--}}
-    {{--            type="text/javascript">--}}
-    {{--    </script>--}}
+    <title>Tourist-attractions.uz - {{ $hotel->{'title_' . $locale} }}</title>
+    <meta name="robots" content="index, follow">
+    <meta property="keywords" content="{{ $settings->meta_keywords }}"/>
+    <meta property="description" content="{{ $settings->{ 'meta_description_' . $locale} }}"/>
+    <meta property="og:title" content="Tourist-attractions.uz - {{ $hotel->{'title_' . $locale} }}"/>
+    <meta property="og:keywords" content="{{ $settings->meta_keywords }}"/>
+    <meta property="og:description" content="{{ $settings->{ 'meta_description_' . $locale} }}"/>
+    <meta property="og:type" content="website"/>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=563b2f5b-d161-4fd9-a856-d9492d0ba468&lang=ru_RU"
             type="text/javascript"></script>
-
 @endsection
 
 @section('content')

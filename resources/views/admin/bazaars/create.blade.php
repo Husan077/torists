@@ -84,7 +84,7 @@
                                 </div>
 
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
-                                    <label>Описание (ru)</label>
+                                    <label>Описание (en)</label>
                                     <script src="{{ asset('js/admin/ckeditor/ckeditor.js') }}"></script>
                                     <textarea class="form-control @error('text_en') is-invalid @enderror" value="{{ old('text_en') }}" name="text_en"></textarea>
                                     <script>

@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <meta name="google-site-verification" content="JINCMliWo8FNVpmbxXqkte-2b7KnLcZVJ_3sMzkBsrw" />
     @include('site.classes.head')
     <script language="JavaScript">
 
@@ -44,6 +45,7 @@
         }
         //edit: removed ";" from last "}" because of javascript error
     </script>
+
 </head>
 <body>
 <div id="__next">

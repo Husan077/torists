@@ -57,7 +57,7 @@
                     <div class="card-body text-center">
                         <x-feathericon-truck style="font-size: 32px; color: #f4834a;"/>
                         <p class="text-muted mt-2 mb-2">Базары</p>
-                        <p class="lead text-22 m-0">{{ $bazaars ?? '0' }}</p>
+                        <p class="lead text-22 m-0">{{ $bazaar ?? '0' }}</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <div class="card-body text-center">
                         <x-feathericon-book-open style="font-size: 32px; color: #f4834a;"/>
                         <p class="text-muted mt-2 mb-2">Рестораны</p>
-                        <p class="lead text-22 m-0">{{ $restaurants ?? '0' }}</p>
+                        <p class="lead text-22 m-0">{{ $restaurant ?? '0' }}</p>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     <div class="card-body text-center">
                         <x-feathericon-award style="font-size: 32px; color: #f4834a;"/>
                         <p class="text-muted mt-2 mb-2">Настройка сайта</p>
-                        <p class="lead text-22 m-0">{{ $settings ?? '0' }}</p>
+                        <p class="lead text-22 m-0">{{ $setting ?? '0' }}</p>
                     </div>
                 </div>
             </div>
