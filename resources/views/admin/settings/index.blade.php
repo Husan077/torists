@@ -43,7 +43,7 @@
                                 </div>
 
                                 <hr style="width: 95%; color: red">
-                                \
+
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-12 form-group mb-3">
                                     <label>Введите Email</label>
                                     <input class="form-control" name="email" value="{{ $setting->email ?? '' }}" type="email" placeholder="Введите email">
