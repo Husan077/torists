@@ -70,12 +70,12 @@
                                 <hr style="width: 95%; color: red">
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-12 form-group mb-3" style="padding-top:30px;">
-                                    <strong>Выберите изображению:<br> <span style="font-size: 11px; color: #967f7f">Изображения не должна превышать 5 MB</span>  </strong>
+                                    <strong>Выберите изображению:<br> <span style="font-size: 11px; color: #967f7f">Изображения не должна превышать 2 MB</span>  </strong>
                                     <br/>
                                     <input class="request @error('image') is-invalid @enderror" type="file" name="image">
                                     @error('image')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong style="font-size: 12px">Изображения не должна превышать 5 MB</strong>
+                                        <strong style="font-size: 12px">Изображения не должна превышать 2 MB</strong>
                                     </span>
                                     @enderror
                                 </div>

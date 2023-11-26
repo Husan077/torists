@@ -25,13 +25,12 @@ class BannersController extends Controller
     public function store(Request $request)
     {
         $valid = $request->validate([
-            'title_uz' => ['nullable', 'string'],
-            'title_ru' => ['nullable', 'string'],
-            'title_en' => ['nullable', 'string'],
-            'text_uz' => ['nullable', 'string'],
-            'text_ru' => ['nullable', 'string'],
-            'text_en' => ['nullable', 'string'],
-            'icon' => ['nullable', 'string'],
+            'title_1_uz' => ['nullable', 'string'],
+            'title_1_ru' => ['nullable', 'string'],
+            'title_1_en' => ['nullable', 'string'],
+            'text_2_uz' => ['nullable', 'string'],
+            'text_2_ru' => ['nullable', 'string'],
+            'text_2_en' => ['nullable', 'string'],
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         if ($valid) {
@@ -53,14 +52,13 @@ class BannersController extends Controller
     public function update(Request $request, $id)
     {
         $valid = $request->validate([
-            'title_uz' => ['nullable', 'string'],
-            'title_ru' => ['nullable', 'string'],
-            'title_en' => ['nullable', 'string'],
-            'text_uz' => ['nullable', 'string'],
-            'text_ru' => ['nullable', 'string'],
-            'text_en' => ['nullable', 'string'],
-            'icon' => ['nullable', 'string'],
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5120'
+            'title_1_uz' => ['nullable', 'string'],
+            'title_1_ru' => ['nullable', 'string'],
+            'title_1_en' => ['nullable', 'string'],
+            'text_2_uz' => ['nullable', 'string'],
+            'text_2_ru' => ['nullable', 'string'],
+            'text_2_en' => ['nullable', 'string'],
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
         if ($valid) {
