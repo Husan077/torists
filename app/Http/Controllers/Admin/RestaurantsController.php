@@ -33,8 +33,8 @@ class RestaurantsController extends Controller
             'location'=> ['nullable', 'string'],
             'ltd'=> ['nullable', 'string'],
             'lng'=> ['nullable', 'string'],
-            'image_1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5120',
-            'image_2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'image_1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image_2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         if ($valid) {
             $restaurants = Restaurants::create($request->all());
@@ -66,8 +66,8 @@ class RestaurantsController extends Controller
             'location'=> ['nullable', 'string'],
             'ltd'=> ['nullable', 'string'],
             'lng'=> ['nullable', 'string'],
-            'image_1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5120',
-            'image_2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5120',
+            'image_1' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image_2' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         if ($valid) {
             $restaurants = Restaurants::find($id);

@@ -156,7 +156,7 @@
                                     <input class="request @error('image_1') is-invalid @enderror" type="file" name="image_1">
                                     @error('image_1')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong style="font-size: 12px">Изображения не должна превышать 5 MB</strong>
+                                        <strong style="font-size: 12px">Изображения не должна превышать 2 MB</strong>
                                     </span>
                                     @enderror
                                 </div>
@@ -167,7 +167,7 @@
                                     <input class="request @error('image_2') is-invalid @enderror" type="file" name="image_2">
                                     @error('image_2')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong style="font-size: 12px">Изображения не должна превышать 5 MB</strong>
+                                        <strong style="font-size: 12px">Изображения не должна превышать 2 MB</strong>
                                     </span>
                                     @enderror
                                 </div>

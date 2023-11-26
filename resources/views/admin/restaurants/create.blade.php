@@ -151,12 +151,12 @@
                                 </div>
 
                                 <div class="col-6 form-group mb-3" style="padding-top:30px;">
-                                    <strong>Выберите изображению: (Для бекграунда) <br> <span style="font-size: 11px; color: #967f7f">Изображения не должна превышать 5 MB</span>  </strong>
+                                    <strong>Выберите изображению: (Для бекграунда) <br> <span style="font-size: 11px; color: #967f7f">Изображения не должна превышать 2 MB</span>  </strong>
                                     <br/>
                                     <input class="request @error('image_2') is-invalid @enderror" type="file" name="image_2">
                                     @error('image_2')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong style="font-size: 12px">Изображения не должна превышать 5 MB</strong>
+                                        <strong style="font-size: 12px">Изображения не должна превышать 2 MB</strong>
                                     </span>
                                     @enderror
                                 </div>

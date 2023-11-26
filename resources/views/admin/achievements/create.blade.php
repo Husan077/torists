@@ -23,7 +23,7 @@
                             <div class="row">
 
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-md-6 col-12 form-group mb-3">
-                                    <label>Иконка (<a target="_blank" href="https://www.flaticon.com/free-icons/map">Можете
+                                    <label>Иконка (<a target="_blank" href="https://www.flaticon.com">Можете
                                             скачать или взять отсюда</a>)</label>
                                     <input class="form-control @error('icon') is-invalid @enderror"
                                            value="{{ old('icon') }}" autocomplete="off"
@@ -103,7 +103,7 @@
                                 </div>
 
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-md-6 col-12 form-group mb-3">
-                                    <label>Описания (uz)</label>
+                                    <label>Описания (en)</label>
                                     <textarea value="{{ old('text_en') }}"  placeholder="Напишите описания на английском языке"
                                               class="form-control @error('text_en') is-invalid @enderror" name="text_en"
                                               cols="30" rows="10"></textarea>
