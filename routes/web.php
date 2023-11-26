@@ -55,7 +55,7 @@ Route::get('/logout', function () {
 
 //Admin
 
-Route::group(['middleware' => ['auth']], function () {
+//Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     Route::resources([
         'admin/banners' => BannersController::class,
@@ -70,7 +70,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/admin/attractions/upload', [AttractionsController::class, 'upload'])->name('admin.attractions.upload');
     Route::post('/admin/bazaars/upload', [BazaarsController::class, 'upload'])->name('admin.bazaars.upload');
     Route::post('/admin/restaurants/upload', [RestaurantsController::class, 'upload'])->name('admin.restaurants.upload');
-});
+//});
 
 // Admin Laravel
 
