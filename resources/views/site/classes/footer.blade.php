@@ -59,7 +59,7 @@
                     <ul class="social-profile v1">
                         @isset($settings->facebook)
                             <li>
-                                <a target="_blank" href="https://facebook.com/{{$settings->facebook}}">
+                                <a target="_blank" href="https://www.facebook.com{{$settings->facebook}}">
                                     <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
@@ -69,11 +69,11 @@
                                         class="ri-instagram-line"></i></a></li>
                         @endisset
                         @isset($settings->telegram)
-                            <li><a target="_blank" href="https://telegram.org/{{$settings->telegram}}"><i
+                            <li><a target="_blank" href="https://t.me/{{$settings->telegram}}"><i
                                         class="ri-telegram-fill"></i></a></li>
                         @endisset
                         @isset($settings->youtube)
-                            <li><a target="_blank" href="https://youtube.com/{{$settings->youtube}}"><i
+                            <li><a target="_blank" href="https://www.youtube.com/{{$settings->youtube}}"><i
                                         class="ri-youtube-fill"></i></a></li>
                         @endisset
                     </ul>
