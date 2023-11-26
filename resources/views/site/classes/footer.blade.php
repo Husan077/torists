@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-lg-6 col-md-8">
                     <div class="copyright-text">
-                        <p><span class="las la-copyright"></span>Разработано <a href="https://turgunoff.uz">Turgunoff.uz"</a> " 2023 Tourists Attractions.
+                        <p><span class="las la-copyright"></span>Разработано <a href="https://turgunoff.uz">"Turgunoff.uz"</a>.  2023 Tourists Attractions.
                             @lang('main.all_rights')
                         </p>
                     </div>
