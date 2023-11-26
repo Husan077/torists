@@ -14,12 +14,10 @@
                 <div class="row">
                     <div class="col-xl-7 col-lg-8">
                         <div class="hero-content style2 text-left">
-                            @isset($banner->{'title_1_' . $locale})
                                 <h1>{{ $banner->{'title_1_' . $locale} }}
                                     <br/>
                                     <span>{{ $banner->{'title_2_' . $locale} }}</span>
                                 </h1>
-                            @endisset
                         </div>
                     </div>
                 </div>
